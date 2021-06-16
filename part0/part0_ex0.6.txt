@@ -1,0 +1,15 @@
+title part0_ex0.6
+
+note over browser:
+add new note
+end note
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+
+note over server:
+server saves the new
+note in the database
+end note
+
+
+server-->browser: {"message":"note created"}

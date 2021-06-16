@@ -1,0 +1,24 @@
+title part0_ex0.5
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server-->browser: HTML -code
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+server-->browser: main.css
+server-->browser: spa.js
+
+note over browser:
+browser starts executing js-code
+that requests JSON data from server 
+end note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: data.json
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/favicon.ico
+server-->browser: HTML -code
+
+browser->server: HTTP GET chrome-extension://hokifickgkhplphjiodbggjmoafhignh/fonts/fabric-icons.css
+server-->browser: fabric-icons.css
